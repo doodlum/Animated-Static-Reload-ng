@@ -40,7 +40,7 @@ private:
 		if (ref) {
 			auto baseObj = ref ? ref->GetBaseObject() : nullptr;
 			if (baseObj && baseObj->formType == RE::FormType::MovableStatic && ref->Get3D() && ShouldSaveAnimation(ref->Get3D())) {
-				logger::debug(FMT_STRING("Find a Should Save Animation Movable Static refID {:x}, baseID {:x}, Default Should Save is {}"), ref->formID, baseObj->formID, result);
+				logger::debug("Find a Should Save Animation Movable Static refID {:x}, baseID {:x}, Default Should Save is {}", ref->formID, baseObj->formID, result);
 				if (!result) {
 					logger::debug("Force Save Animation!");
 					return true;
